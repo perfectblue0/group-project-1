@@ -1,0 +1,28 @@
+*{
+    background-color: darkolivegreen;
+}
+header{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    background-color: goldenrod;
+}
+h1{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.search{
+    color: black;
+    display: flex;
+    justify-content: center;
+  
+
+}
+#results{
+    display: flex;
+    flex-direction: column;
+    
+}
