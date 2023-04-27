@@ -2,16 +2,29 @@
     background-color: darkolivegreen;
 }
 header{
-    padding: 10px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     font-size: xx-large;
     background-color: goldenrod;
+    height: 50px;
 }
 h1{
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center;
+}
+.links{
+    display: flex;
+    font-size: large;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    background-color: darkolivegreen;
+    padding: 20px;
+}
+a{
+    color: black;
 }
 
 .search{
@@ -21,8 +34,18 @@ h1{
   
 
 }
+#input{
+    color: coral;
+    background-color: white;
+    font-size: larger;
+}
+#search{
+    background-color: white;
+    font-size: larger;
+}
 #results{
     display: flex;
     flex-direction: column;
+    
     
 }
