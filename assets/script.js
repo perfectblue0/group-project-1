@@ -1,8 +1,10 @@
 const input=document.querySelector("#input");
 const searchButton=document.querySelector("#search");
+const histButton=document.querySelector("#history");
+const historySection=document.querySelector("#hist");
 const errorSection=document.querySelector("#errors");
 const resultsSection=document.querySelector("#results");
-
+const history=JSON.parse(localStorage.getItem('searches')) || [];
 
 const url = 'http://en.wikipedia.org/w/api.php';
 const params={
@@ -69,6 +71,9 @@ const gatherData = pages => {
 
 const getData=async ()=>{
     const userInput=input.value;
+    history.push(userInput);
+    localStorage.setItem("searches",JSON.stringify(history) );
+   
     if(isEmpty(userInput)) return;
     //console.log(userInput);
     params.gsrsearch = userInput;
@@ -96,9 +101,16 @@ const handleKeyEvent=(e)=>{
 const registerEventHandlers= () =>{
     input.addEventListener('keydown', handleKeyEvent);
     searchButton.addEventListener('click', getData);
+    histButton.addEventListener('click', getHistory);
 
 }
+const getHistory= () =>{
+   
+  var temp= " "+JSON.parse(localStorage.getItem("searches"));
+  historySection.innerHTML="search history: "+temp;
+  
 
+}
 
 
 registerEventHandlers();
