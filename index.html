@@ -11,19 +11,29 @@
     <header>Sunny Search</header>
     <h1>Type anything and hit the search button </h1>
     <button id="history">history</button>
-   <div class="search">
-        <form autocomplete="on">
-            <input type="text" id="input" placeholder="Search" name="test"> 
-            <button id="search" type="submit">🔍</button>
-        </form>
-   </div>
+        <div class="search">
+            <form autocomplete="on">
+                <input type="text" id="input" placeholder="Search" name="test"> 
+                <button id="search" type="submit">🔍</button>
+            </form>
+        </div>
+    <!-- Modal  -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+         <div class="modal-content">
+             <div class="modal-header">
+                 <span class="close">&times;</span>
+                 <h2>Search History</h2>
+             </div>
+             <div class="modal-body"></div>
+         </div>
+     </div>
    
-   <div id="hist"> </div>
+    <!-- results container  -->
    <div id="results"></div>
-   
+    <!-- errors container -->
    <div id="errors"></div>
-   <script type="text/javascript" src="assets/script.js"></script>
-    
+   <script type="text/javascript" src="assets/script.js"></script> 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>
