@@ -5,28 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API test</title>
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
     <header>Sunny Search</header>
-    <div class="links">
-        
-            <a href="" id="history">Search History</a>
-           <a href="https://github.com/perfectblue0/group-project-1" > Github</a>
-        
-        
-        
-    </div>
     <h1>Type anything and hit the search button </h1>
+    <button id="history">history</button>
    <div class="search">
-    <input type="text" id="input"> 
-    <button id="search">🔍</button>
+        <form autocomplete="on">
+            <input type="text" id="input" placeholder="Search" name="test"> 
+            <button id="search" type="submit">🔍</button>
+        </form>
    </div>
-
+   
+   <div id="hist"> </div>
    <div id="results"></div>
-
+   
    <div id="errors"></div>
-    <script type="text/javascript" src="assets/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
