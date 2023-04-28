@@ -1,10 +1,12 @@
 const input=document.querySelector("#input");
 const searchButton=document.querySelector("#search");
 const histButton=document.querySelector("#history");
-const historySection=document.querySelector("#hist");
 const errorSection=document.querySelector("#errors");
 const resultsSection=document.querySelector("#results");
 const history=JSON.parse(localStorage.getItem('searches')) || [];
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+var content = document.querySelector(".modal-body")
 
 const url = 'http://en.wikipedia.org/w/api.php';
 const params={
@@ -75,7 +77,6 @@ const getData=async ()=>{
     localStorage.setItem("searches",JSON.stringify(history) );
    
     if(isEmpty(userInput)) return;
-    //console.log(userInput);
     params.gsrsearch = userInput;
     disableUi();
     clearPrev();
@@ -105,13 +106,18 @@ const registerEventHandlers= () =>{
 
 }
 const getHistory= () =>{
-   
-  var temp= " "+JSON.parse(localStorage.getItem("searches"));
-  historySection.innerHTML="search history: "+temp;
-  
-
+    var temp= JSON.parse(localStorage.getItem("searches"));
+    content.innerHTML=temp;  
+    modal.style.display = "block";
 }
-
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 
 registerEventHandlers();
 
