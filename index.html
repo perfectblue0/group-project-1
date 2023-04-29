@@ -9,6 +9,33 @@
 </head>
 <body>
     <header>Sunny Search</header>
+    <!--weather-->
+    <div class="weatherCont">
+        <div class="weatherHeader">
+            <form class="weatherSearch">
+                <input type="text" placeholder="Enter City Name" class="weatherSearchForm"></input>
+                <button id="weatherSearch" type="submit">🔍</button>    
+            </form>
+            <div class="unit-weather">
+            <span class="unit-weather-fahrenheit">&#176F</span>
+            <span class="unit-weather-celsius">&#176C</span>
+        </div>
+    </div>
+    <div class="weatherBody">
+        <h2 class="weatherCity"></h2>
+        <!-- BUG! <div class="weatherDateT"></div>  --> 
+    
+        <div class="weatherCondition">
+        </div>
+        <div class="weatherIcon">
+            <img src="http://openweathermap.org/img/wn/10d@4x.png"/>
+        </div>
+        <p class="weatherTemp"></p>
+        <div class="weatherMinMax">
+        </div>
+    </div>
+    <!--possibly adding more weather info like real feel, humidity, wind speed(not part of the MVP)-->
+    </div>
     <h1>Type anything and hit the search button </h1>
     <button id="history">history</button>
         <div class="search">
