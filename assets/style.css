@@ -81,3 +81,32 @@ a{
     font-size: 28px;
     font-weight: bold;
   }
+
+  /* weather styling */
+
+  .weatherCont {
+    color: rgb(250, 208, 55);
+    display:flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.unit-weather {
+    padding-top: 30px;
+}
+
+.weatherSearchForm {
+    background-color: white;
+}
+
+.weatherIcon img {
+    width: 90px;
+}
+
+.unit-weather-fahrenheit:hover, .unit-weather-celsius:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
