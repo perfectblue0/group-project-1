@@ -122,86 +122,17 @@ span.onclick = function() {
 registerEventHandlers();
 
 
-// weather
+// dog section
 
-// city and units
-var currentC = "Tokyo";
-var uni = "imperial";
+const img = document.getElementById('dogImg');
+const dogBtn = document.getElementById("dogBtn");
 
-// country code to name
-function convCounCode(coun){
-    let regNames = new Intl.DisplayNames(["en"], {type:"region"});
-    return regNames.of(coun);
-}
-// query selectors
-var wCity = document.querySelector(".weatherCity");
-var dateNTime = document.querySelector(".weatherDateT");
-var weatherCond = document.querySelector(".weatherCondition");
-var weatherTemp = document.querySelector(".weatherTemp");
-var weatherIcon = document.querySelector(".weatherIcon");
-var weatherMinMax = document.querySelector(".weatherMinMax");
-
-// search bar event listener!
-document.querySelector(".weatherSearch").addEventListener('submit', e => {
-    var look = document.querySelector(".weatherSearchForm");
-    e.preventDefault();
-    currentC = look.value;
-    weatherGet();
-    look.value = "";
-});
-
-// unit event listener will change to fahrenheit or celsius
-document.querySelector(".unit-weather-celsius").addEventListener('click', () => {
-    if (uni !== "metric") {
-        uni = "metric";
-        weatherGet();
-    }
-});
-
-document.querySelector(".unit-weather-fahrenheit").addEventListener('click', () => {
-    if (uni !== "imperial") {
-        uni = "imperial";
-        weatherGet(); 
-    }
-});
-
-// BUGS :( converts unix timestamp to user friendly readable type 
-
-/*function convUnixTime(stamp, timezone) {
-    // seconds -> hours
-    const convZone = timezone / 3600;
-    const cDate = new Date(stamp * 1000);
-
-    const choices = {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        timezone: `Etc/GMT${convZone>=0?"-":"+"}${Math.abs(convZone)}`,
-        hour12: true,
-    }
-    return cDate.toLocaleString("en-US", choices);
-};
-*/
-
-// function gets weather data, time, 
-function weatherGet() {
-
-    const apiKey = "63adc119973bfcef9d6eddaf4a6374cf";
-
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currentC}&appid=${apiKey}&units=${uni}`).then(resp=>resp.json()).then(info=> {
-    console.log(info);
-    wCity.innerHTML = `${info.name}, ${convCounCode(info.sys.country)}`;
-    // BUGS :( dateNTime.innerHTML = convUnixTime(info.dt,info.timezone);
-    weatherCond.innerHTML = `<p>${info.weather[0].main}`;
-    weatherTemp.innerHTML = `${info.main.temp.toFixed()}&#176`;
-    weatherIcon.innerHTML = `<img src="http://openweathermap.org/img/wn/${info.weather[0].icon}@4x.png"/>`;
-
-    weatherMinMax.innerHTML = `<p>Min: ${info.main.temp_min.toFixed()}&#176</p><p>Max: ${info.main.temp_max.toFixed()}&#176</p>`;
-
+const randDog = function() {
+    fetch("https://dog.ceo/api/breeds/image/random")
+    .then((res) => res.json())
+    .then((data) => {
+        img.innerHTML = `<img src='${data.message}'/>`;
     });
 };
 
-document.body.addEventListener('load', weatherGet());
+dogBtn.addEventListener("click", randDog);
