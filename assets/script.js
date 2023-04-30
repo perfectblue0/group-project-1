@@ -119,6 +119,14 @@ span.onclick = function() {
     }
   }
 
+  // Clears History Function
+  const clearHistory = function() {
+    localStorage.clear();
+    history.length = 0;
+}
+// Clears History Button
+clear.addEventListener("click", clearHistory)
+
 registerEventHandlers();
 
 
