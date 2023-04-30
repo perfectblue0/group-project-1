@@ -125,7 +125,7 @@ span.onclick = function() {
     history.length = 0;
 }
 // Clears History Button
-clear.addEventListener("click", clearHistory)
+clear.addEventListener("click", clearHistory);
 
 registerEventHandlers();
 
