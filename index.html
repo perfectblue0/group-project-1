@@ -5,29 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> 
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
 </head>
 <body>
-    <header>Sunny Search</header>
-    <button id="history">history</button>
-    <!--random dog image-->
-    <section class="dog-box">
-        <div id="dogImg"></div>
-        <button id="dogBtn">New Dog</button>
-    </section>
+    <header>
+        <h1 class="title" >Sunny Search</h1>
+
+    </header>
+    <div class="navbar-menu navbar is-warning">
+        <div class="navbar-start">
+            <a class="navbar-item" href="https://github.com/perfectblue0/group-project-1"> Github </a>
+        </div>
+      
+        <div class="navbar-end">
+            <a class="navbar-item" href="https://en.wikipedia.org/wiki/Main_Page"> Wiki </a>
+        </div>
+      </div>
+   
+  
     <!--wiki search section-->
     <h1>Type anything and hit the search button </h1>
     
         <div class="search">
             <form autocomplete="on">
-                <input type="text" id="input" placeholder="Search" name="test"> 
-                <button id="search" type="submit">🔍</button>
+                <input class="input is-warning" type="text" id="input" placeholder="Search" name="test">
+                
             </form>
+            <div class="buttons">
+                <button class="button is-warning" id="search" type="submit">🔍</button> 
+                <button class="button is-warning" id="history">history</button>
+                <button class="button is-warning"id="clear">clear history</button>
+            </div>
         </div>
     <!-- Modal  -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal1">
         <!-- Modal content -->
-         <div class="modal-content">
+         <div class="modal-content1">
              <div class="modal-header">
                  <span class="close">&times;</span>
                  <h2>Search History</h2>
@@ -37,9 +51,15 @@
      </div>
    
     <!-- results container  -->
-   <div id="results"></div>
+    <div class="content is-normal "id="results"></div>
     <!-- errors container -->
    <div id="errors"></div>
+
+     <!--random dog image-->
+     <section class="dog-box">
+        <div id="dogImg"></div>
+        <button id="dogBtn">New Dog</button>
+    </section>
    <script type="text/javascript" src="assets/script.js"></script> 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

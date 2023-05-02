@@ -1,6 +1,7 @@
 const input=document.querySelector("#input");
 const searchButton=document.querySelector("#search");
 const histButton=document.querySelector("#history");
+const clearButton=document.querySelector("#clear");
 const errorSection=document.querySelector("#errors");
 const resultsSection=document.querySelector("#results");
 const history=JSON.parse(localStorage.getItem('searches')) || [];
@@ -103,6 +104,7 @@ const registerEventHandlers= () =>{
     input.addEventListener('keydown', handleKeyEvent);
     searchButton.addEventListener('click', getData);
     histButton.addEventListener('click', getHistory);
+    clearButton.addEventListener('click', clearHistory)
 
 }
 const getHistory= () =>{
@@ -110,6 +112,16 @@ const getHistory= () =>{
     content.innerHTML=temp;  
     modal.style.display = "block";
 }
+const clearHistory= () =>{
+    localStorage.clear();
+    history.length=0;
+    var message="No searches in history";
+    if(history.length==0){
+        content.innerHTML=message;
+
+    }
+    return;
+  }
 span.onclick = function() {
     modal.style.display = "none";
   }
