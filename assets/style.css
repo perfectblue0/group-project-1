@@ -1,18 +1,20 @@
 html{
     background-color: darkolivegreen;
 }
+
 header{
     padding: 10px;
     display: flex;
     justify-content: center;
     font-size: xx-large;
     background-color: goldenrod;
-   
 }
+
 h1{
     padding: 10px;
     display: flex;
     justify-content: center;
+    color: #ffe08a;
 }
 
 
@@ -25,17 +27,34 @@ a{
     color: black;
     display: flex;
     justify-content: center;
-  
-
 }
-
 
 #results{
-    display: flex;
-    flex-direction: column;
-    
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    justify-content: center;
+    margin: 30px; 
+}
+
+div.results__item {
+    font-size: 12px;
+    margin: 10px;
+    padding: 5px 10px 10px 20px;
+    background-color: goldenrod;
     
 }
+
+div.results__item:hover {
+    background-color: #ffe08a;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 15px;
+    margin: 15px auto;
+    font-weight: normal;
+}
+
  /* Modal Content */
  .modal1 {
     display: none; /* Hidden by default */
@@ -48,6 +67,7 @@ a{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
+
  .modal-content1 {
     background-color: goldenrod;
     margin: 15% auto; /* 15% from the top and centered */
@@ -56,6 +76,7 @@ a{
     width: 80%; /* Could be more or less, depending on screen size */
     text-align: center;
   }
+
   .modal-header {
     background-color: darkolivegreen;
     text-align: center;
@@ -71,12 +92,16 @@ a{
   }
 
   /* dog styling */
-
 .dog-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 70px auto;
+}
+
+.dogMessage {
+    color: #ffe08a;
+    margin: 20px;
 }
 
 img {
@@ -86,5 +111,30 @@ img {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+    #results {
+        grid-template-columns: 250px 250px 250px;
+    }
+}
 
+@media screen and (max-width: 750px) {
+    #results {
+        grid-template-columns: 250px 250px;
+    }
+}
 
+@media screen and (max-width: 500px) {
+    
+    .search {
+        flex-direction: column;
+    }
+    
+    .buttons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    #results {
+        grid-template-columns: 250px;
+    }
+}
