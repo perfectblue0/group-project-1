@@ -1,6 +1,7 @@
 const input=document.querySelector("#input");
 const searchButton=document.querySelector("#search");
 const histButton=document.querySelector("#history");
+const clearButton=document.querySelector("#clear");
 const errorSection=document.querySelector("#errors");
 const resultsSection=document.querySelector("#results");
 const history=JSON.parse(localStorage.getItem('searches')) || [];
