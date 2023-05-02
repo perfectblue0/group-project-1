@@ -103,6 +103,7 @@ const registerEventHandlers= () =>{
     input.addEventListener('keydown', handleKeyEvent);
     searchButton.addEventListener('click', getData);
     histButton.addEventListener('click', getHistory);
+    clearButton.addEventListener('click', clearHistory)
 
 }
 const getHistory= () =>{
@@ -110,6 +111,16 @@ const getHistory= () =>{
     content.innerHTML=temp;  
     modal.style.display = "block";
 }
+const clearHistory= () =>{
+    localStorage.clear();
+    history.length=0;
+    var message="No searches in history";
+    if(history.length==0){
+        content.innerHTML=message;
+
+    }
+    return;
+  }
 span.onclick = function() {
     modal.style.display = "none";
   }

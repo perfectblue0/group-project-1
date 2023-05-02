@@ -2,32 +2,21 @@ html{
     background-color: darkolivegreen;
 }
 header{
-    padding: 30px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     font-size: xx-large;
     background-color: goldenrod;
-    height: 50px;
+   
 }
 h1{
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
 }
 
-#history{
-    margin: 30px 20px auto;
-}
 
-.links{
-    display: flex;
-    font-size: large;
-    flex-direction: row;
-    width: auto;
-    justify-content: space-between;
-    background-color: darkolivegreen;
-    padding: 20px;
-}
+
 a{
     color: black;
 }
@@ -36,19 +25,11 @@ a{
     color: black;
     display: flex;
     justify-content: center;
-    margin: 45px;
   
 
 }
-#input{
-    color: coral;
-    background-color: white;
-    font-size: larger;
-}
-#search{
-    background-color: white;
-    font-size: larger;
-}
+
+
 #results{
     display: flex;
     flex-direction: column;
@@ -56,7 +37,7 @@ a{
     
 }
  /* Modal Content */
- .modal {
+ .modal1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -67,7 +48,7 @@ a{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
- .modal-content {
+ .modal-content1 {
     background-color: goldenrod;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -78,13 +59,14 @@ a{
   .modal-header {
     background-color: darkolivegreen;
     text-align: center;
+    padding: 10px;
   }
   
   /* The Close Button */
   .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
   }
 
@@ -104,10 +86,5 @@ img {
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 330px) {
-    img {
-        height: 200px;
-        width: auto;
-    }
-}
+
 
