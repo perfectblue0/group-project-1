@@ -1,68 +1,42 @@
 # group-project-1
 
 ## Description
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-Our motivation was to build an application that would allow us to practice integrating more than one API in an application, styling with Bulma, and working with local storage. We built this project so that users could research Wiki articles and alleviate cognitive fatigue. We learned about the importance of security measures in repos. During our first phase we were headed in a  different direction and had exposed an API key in a commit. We received a notification from GitGuardian and took measures to fix that issue. We pivoted and now are wiser and proud to share our application which helps researchers of articles divide time between work and mental health breaks.
-
-## Table of Contents (Optional)
-If your README is long, add a table of contents to make it easy for users to find what they need.
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
-
-## Installation
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
+Our motivation was to build an application that would allow us to practice integrating more than one API in an application, styling with Bulma, and working with local storage. We built this project so that users could research Wiki articles and alleviate cognitive fatigue. We learned about the importance of security measures in repos. During our first phase we were headed in a  different direction and had exposed an API key in a commit. We received a notification from GitGuardian and took measures to fix that issue. We pivoted and now off this ad-free application that can be used to search any articles that can be found on Wikipedia as well as can be utilized to fetch random dog pictures so users can have a chance to relieve cognitive dulling.
 
 ## Usage
-Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
-To use the application, click on this link:
+   ![wide](./assets/images/wide-screen-shot.png)
+
+   ![mobile](./assets/images/mobile-screen-shot.png)
+
+   ![pup](./assets/images/mobile-screen-shot-pup.png)
+
+### To use the application, click on this link:
 (insert deployed app link)
 
-Next, type in a top of your choosing in the search bar and click the magnifying glass or press ENTER on your keyboard. You will then see a list of articles that are relevant to your topic. Clicking an article will open a new tab window and will show a Wiki page about the article title that you selected. After exploring, you can close the tab window and navigate back up to the top of the application page. To view a random dog picture, click on the New Dog box; this will generate a picture of a dog. You may click as many times as you wish and will generate a random dog every time you do so. To view the history of what you have searched in the search bar, click on the History box in the top left corner. (insert instructions about clear history)
+Next, type in a topic of your choosing in the search bar and click the magnifying glass. You will then see a list of articles that are relevant to your topic. Clicking an article will open a new tab window and will show a Wiki page about the article title that you selected. After exploring, you can close the tab window and navigate back up to the main application page. At the bottom of the page you can view a random dog picture by clicking on the "Ruff" button. You may click as many times as you wish and will generate a random dog every time you do so. To view the history of what you have searched in the search bar, click on the "history" button next to the magnifying glass. You will then see a modal pop-up with a list of the items you have searched. You can click on the X on the right side of the modal to go back to the main page. To clear your history of searches click on the "clear history" button next to history. If you click on the "history" button after you click ont he "clear history", the modal will only contain the title "Search History" with nothing else in it. To visit where the application is located, you may click on the "Github" located to the left of the navigation bar. To visit the actual Wikipedia webiste, click on the "Wiki" that's located on the right side of the navigation bar.
 
 ## Credits
 List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 If you followed tutorials, include links to those here as well.
 
-Collaborators:
-(insert names)
+### Collaborators:
+Deandra Diedrick
+Josh Deino
+Kenyon Gordon
+Paola Guerrero
 
-Tutorials:
+### Tutorials:
 https://www.youtube.com/watch?v=yqwHxAH1xrw
+
 https://www.youtube.com/watch?v=yqwHxAH1xrw
 
-## License
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
----
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+### APIs
+
+https://en.wikipedia.org/api/rest_v1/#/
+
+https://dog.ceo/dog-api/
 
 
-## Badges
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
-
-## Features
-If your project has a lot of features, list them here.
-
-
-## How to Contribute
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-
-## Tests
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
