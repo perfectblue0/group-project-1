@@ -14,6 +14,11 @@ h1{
     display: flex;
     justify-content: center;
 }
+
+#history{
+    margin: 30px 20px auto;
+}
+
 .links{
     display: flex;
     font-size: large;
@@ -31,6 +36,7 @@ a{
     color: black;
     display: flex;
     justify-content: center;
+    margin: 45px;
   
 
 }
@@ -82,30 +88,25 @@ a{
     font-weight: bold;
   }
 
-  /* weather styling */
+  /* dog styling */
 
-  .weatherCont {
-    color: rgb(250, 208, 55);
-    display:flex;
+.dog-box {
+    display: flex;
     flex-direction: column;
-    padding: 30px;
-    margin-top: 30px;
-    text-align: center;
+    align-items: center;
+    margin: 70px auto;
 }
 
-.unit-weather {
-    padding-top: 30px;
+img {
+    height: 300px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.weatherSearchForm {
-    background-color: white;
-}
-
-.weatherIcon img {
-    width: 90px;
-}
-
-.unit-weather-fahrenheit:hover, .unit-weather-celsius:hover {
-    cursor: pointer;
-    font-size: 25px;
+@media screen and (max-width: 330px) {
+    img {
+        height: 200px;
+        width: auto;
+    }
 }
