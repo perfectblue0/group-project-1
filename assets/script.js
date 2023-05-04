@@ -15,8 +15,12 @@ function updateTime() {
   document.getElementById('date-time').innerHTML = DT;
 }
 
-// Update time every second
+  // Update time every second
 setInterval(updateTime, 1000);
+
+
+
+const url = 'https://en.wikipedia.org/w/api.php'; 
 const params={
     origin:'*',
     format:'json',
