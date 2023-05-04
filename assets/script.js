@@ -9,12 +9,14 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 var content = document.querySelector(".modal-body")
 var dateTime = new Date();
-const DT= dateTime.toLocaleString();
-document.getElementById('date-time').innerHTML=DT;
+function updateTime() {
+  const dateTime = new Date();
+  const DT = dateTime.toLocaleString();
+  document.getElementById('date-time').innerHTML = DT;
+}
 
-const url = 'https://en.wikipedia.org/w/api.php'; 
-
-
+// Update time every second
+setInterval(updateTime, 1000);
 const params={
     origin:'*',
     format:'json',
