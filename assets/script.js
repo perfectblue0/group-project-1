@@ -12,7 +12,9 @@ var dateTime = new Date();
 const DT= dateTime.toLocaleString();
 document.getElementById('date-time').innerHTML=DT;
 
-const url = 'http://en.wikipedia.org/w/api.php';
+const url = 'https://en.wikipedia.org/w/api.php'; 
+
+
 const params={
     origin:'*',
     format:'json',
