@@ -22,9 +22,9 @@ If you used any third-party assets that require attribution, list the creators w
 If you followed tutorials, include links to those here as well.
 
 ### Collaborators:
-Deandra Diedrick
-Josh Deino
-Kenyon Gordon
+Deandra Diedrick,
+Josh Deino,
+Kenyon Gordon,
 Paola Guerrero
 
 ### Tutorials:
