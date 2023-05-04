@@ -9,8 +9,15 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 var content = document.querySelector(".modal-body")
 var dateTime = new Date();
-const DT= dateTime.toLocaleString();
-document.getElementById('date-time').innerHTML=DT;
+function updateTime() {
+    const dateTime = new Date();
+    const DT = dateTime.toLocaleString();
+    document.getElementById('date-time').innerHTML = DT;
+  }
+  
+  // Update time every second
+  setInterval(updateTime, 1000);
+
 
 const url = 'http://en.wikipedia.org/w/api.php';
 const params={
