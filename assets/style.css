@@ -112,9 +112,8 @@ img {
     margin-bottom: 20px;
 }
 
-.footer {
+.navbar {
     background: goldenrod;
-    height: 50px;
 }
 
 @media screen and (max-width: 1000px) {
