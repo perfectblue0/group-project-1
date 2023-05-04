@@ -8,6 +8,9 @@ const history=JSON.parse(localStorage.getItem('searches')) || [];
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 var content = document.querySelector(".modal-body")
+var dateTime = new Date();
+const DT= dateTime.toLocaleString();
+document.getElementById('date-time').innerHTML=DT;
 
 const url = 'http://en.wikipedia.org/w/api.php';
 const params={
