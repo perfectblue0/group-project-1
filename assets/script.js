@@ -9,6 +9,8 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 var content = document.querySelector(".modal-body")
 var dateTime = new Date();
+const url = 'https://en.wikipedia.org/w/api.php';
+
 function updateTime() {
   const dateTime = new Date();
   const DT = dateTime.toLocaleString();
